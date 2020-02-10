@@ -21,7 +21,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 			.authorizeRequests()
 				.antMatchers("/", "/welcome").permitAll()
 				.antMatchers("/avengers").hasRole("HERO")
-				.antMatchers("/bases").hasRole("DIRECTOR")
+				.antMatchers("/secret-bases", "bases").hasRole("DIRECTOR")
 //				.anyRequest().authenticated()
 				.and()
 			.formLogin()
