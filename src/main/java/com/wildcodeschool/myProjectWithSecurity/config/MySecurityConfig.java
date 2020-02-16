@@ -19,10 +19,10 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
-				.antMatchers("/", "/welcome").permitAll()
-				.antMatchers("/avengers").hasRole("HERO")
-				.antMatchers("/secret-bases", "bases").hasRole("DIRECTOR")
-//				.anyRequest().authenticated()
+				.antMatchers("/").permitAll()
+				.antMatchers("/avengers/assemble").hasRole("HERO")
+				.antMatchers("/secret-bases").hasRole("DIRECTOR")
+				.anyRequest().authenticated()
 				.and()
 			.formLogin()
 				.and()

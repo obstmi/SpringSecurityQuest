@@ -16,7 +16,7 @@ public class AvengersController {
 		return "welcome";
 	}
 	
-	@GetMapping("/avengers")
+	@GetMapping("/avengers/assemble")
 	public String shieldHero() {
 		return "avengers";
 	}
